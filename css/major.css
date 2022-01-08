@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+.home {
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    perspective: 340px;
+    width: 100%;
+    position: relative;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+span {
+    display: block;
+    text-align: center;
+}
+
+.title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 50px;
+    margin: auto;
+    bottom: 0;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.titles {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 200px;
+    right: 200px;
+    top: 150px;
+    line-height: 40px;
+    margin: auto;
+    bottom: 0;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.outNode {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 135px;
+
+    background: rgba(255,255,255,0);
+    margin: auto;
+    border: 2px solid #c289a4;
+    justify-content: center;
+    width:1200px;
+    height:635px;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+
+.content2 div{
+
+    display:none;
+    width:1100px;
+    height:610px;
+    line-height: 26px;
+    padding: 25px 0 50px 50px;
+    font-weight: 500;
+    background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation:  maskedAnimation 4s infinite linear;
+    font-size: 20px;
+
+}
+
+@keyframes maskedAnimation {
+	0% {
+    background-position: 0 0;
+	}
+	100% {
+	    background-position: -100% 0;
+	}
+}
+
+.content2 .show{
+    display: block;
+}
+
+.ribbon {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 300px;
+    top: 50px;
+    margin: auto;
+}
+
+.ribbon:after,
+.ribbon:before {
+    margin-top: 0.5em;
+    content: "";
+    display: flex;
+    ;
+    border: 1.5em solid #fff;
+}
+
+.ribbon:after {
+    border-right-color: transparent;
+}
+
+.ribbon:before {
+    border-left-color: transparent;
+}
+
+.ribbon a:link,
+.ribbon a:visited {
+    color: #000;
+    text-decoration: none;
+    height: 3.5em;
+    overflow: hidden;
+}
+
+.ribbon span {
+    background: #fff;
+    display: inline-block;
+    line-height: 3em;
+    padding: 0 1.5em;
+    margin-top: 0.5em;
+    position: relative;
+    -webkit-transition: background-color 0.2s, margin-top 0.2s;
+    /* Saf3.2+, Chrome */
+    -moz-transition: background-color 0.2s, margin-top 0.2s;
+    /* FF4+ */
+    -ms-transition: background-color 0.2s, margin-top 0.2s;
+    /* IE10 */
+    -o-transition: background-color 0.2s, margin-top 0.2s;
+    /* Opera 10.5+ */
+    transition: background-color 0.2s, margin-top 0.2s;
+}
+
+.ribbon a:hover span {
+    background: #FFD204;
+    margin-top: 0;
+}
+
+.ribbon span:before {
+    content: "";
+    position: absolute;
+    top: 3em;
+    left: 0;
+    border-right: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+.ribbon span:after {
+    content: "";
+    position: absolute;
+    top: 3em;
+    right: 0;
+    border-left: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}

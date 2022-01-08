@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>董宇轩的计算机导论作业</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="home">
+        <div class="content">
+            <div class="stars"></div>
+            <img class="bgc" src="img/index_bj.jpg" width="100%"alt="">
+            <h3 class="title">欢迎来到我的个人网站</h3>
+            <h3 class="titles">个人信息介绍</h3>
+            <div class='ribbon'>
+                <a href='./index.html'><span>主页</span></a>
+                <a href='./class.html'><span>课程</span></a>
+                <a href='./data.html'><span>资料</span></a>
+                <a href='./major.html'><span>专业认识</span></a>
+                <a href='./plan.html'><span>学业规划</span></a>
+            </div>
+ 
+        <audio autoplay="autoplay" id="audio" loop="loop">
+                <source src="mp3/1.mp3" type="audio/MP3">
+               
+        </audio>
+    </div>
+    <div class="outNode">
+        <div class="nav">
+            <div class="active">基本信息</div>
+            <div>编程能力</div>
+            <div>兴趣爱好</div>
+        </div>
+        <div class="content2">
+            <div class="show">
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;姓名:董宇轩<br></br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;学号:2206110705<br></br>  
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;班级:计算机006<br></br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;QQ:2499146889<br></br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;邮箱:2499146889@qq.com<br>
+            </div>
+            <div>
+                &emsp;&emsp;对多种语言都略有了解，如C语言，C#语言，C++语言，Java
+                语言，Python语言，Matlab语言，Html与Css语言等，一些语言是
+                自学的，掌握比较浅，其中自己比较喜欢和接触时间较长的是C语
+                言，Python语言。了解这么多语言，是为了找到一个自己最喜欢
+                的语言风格，经过2年多的训练，合计约3万余行代码量，目前最喜欢C语言，但在新的一年里，学校将开设C++和Java的选修课，到
+                时候我将继续学习面向对象编程思想，进一步提高自己的编程能力。
+            </div>
+            <div>
+                爱好:<br><br>
+                体育方面:&emsp;边听音乐边跑步，乒乓球，篮球等。<br><br>
+                学习方面:&emsp;阅读，学习新的软件，研究新的算法。（目前自主学习的软件:Pr，Ps，Ae，Spss，Lingo，Latex）<br><br>
+                其他方面:&emsp;和同学出去聚餐，看电影（最喜欢《肖申克的救赎》，其中的经典名言一直激励着我前进："Get busy living or get busy dying!"）。
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<img onClick="playMusic(this)" class="music musicRotate" src="img/musicP.png">
+<script src="js/snowflake.js"></script>
+<script src="js/jquery.min.js"></script>
+<script>
+    let mucics = document.getElementById('audio')
+    document.body.addEventListener('mousemove', function() {
+        setTimeout(() => {
+            mucics.play();
+        }, 200);
+    }, false);
+    const navAll=document.querySelectorAll('.nav div')
+    const divAll=document.querySelectorAll('.content2 div')
+    for(let i=0;i<3;i++)
+    {
+        navAll[i].setAttribute('index',i)
+        navAll[i].onclick=function(){
+            for(let i=0;i<3;i++){
+                navAll[i].className=''
+                divAll[i].className=''
+            }
+            this.className='active'
+            divAll[this.getAttribute('index')].className='show'
+        }
+    }
+</script>
+
+</html>
